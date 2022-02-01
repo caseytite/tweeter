@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  height: 120px;
+  background-color: #4056a1;
+  viewport-fit: 100vw;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  justify-content: space-between;
+  position: static;
+  z-index: 1;
+}
+nav span {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  /* margin-top: 75%; */
+}
+.main-logo {
+  font-family: Bungee;
+  font-size: 1.5em;
+}
+.write-new-tweet {
+  font-family: Source Sans Pro;
+  font-size: 1em;
+}
+@viewport {
+  width: 100vw;
+}
+.fa-angles-down {
+  color: red;
+}
+.new-tweet-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
