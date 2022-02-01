@@ -9,8 +9,8 @@ nav {
   color: #fff;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  /* margin-bottom: 10px; */
+  align-items: flex-end;
+  /* margin-bottom: -10px; */
   justify-content: space-between;
   position: static;
   z-index: 1;
@@ -18,8 +18,9 @@ nav {
 nav span {
   margin-left: 1.5em;
   margin-right: 1.5em;
-  /* margin-top: 75%; */
+  /* margin-bottom: 1em; */
 }
+
 .main-logo {
   font-family: Bungee;
   font-size: 1.5em;
@@ -33,6 +34,7 @@ nav span {
 }
 .fa-angles-down {
   color: red;
+  margin-bottom: 0.25em;
 }
 .new-tweet-arrows {
   display: flex;
