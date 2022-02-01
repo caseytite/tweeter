@@ -9,6 +9,7 @@
   font-family: Bungee;
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
 }
 
@@ -20,6 +21,13 @@
 }
 .counter {
   margin-top: 0.5em;
+  position: relative;
+  /* padding-right: 10%; */
+}
+.dove {
+  margin-top: 0.7em;
+  /* padding-right: 83%; */
+  /* padding-left: 0.2em; */
 }
 
 #tweet-text {
@@ -40,4 +48,7 @@
 
 #tweet-text:focus {
   outline: none;
+}
+.nerdy-birdy {
+  display: none;
 }

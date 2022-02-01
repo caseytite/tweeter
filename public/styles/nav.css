@@ -4,13 +4,13 @@
 
 nav {
   height: 120px;
-  background-color: #4056a1;
+  /* background-color: #4056a1; */
+  background-image: url('../images/background.png');
   viewport-fit: 100vw;
   color: #fff;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  /* margin-bottom: -10px; */
+  align-items: center;
   justify-content: space-between;
   position: static;
   z-index: 1;
