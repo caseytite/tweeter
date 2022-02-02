@@ -52,6 +52,7 @@ body {
   margin-left: 0.5em;
   margin-right: 0.5em;
   padding-bottom: 1em;
+  padding-left: 0.5em;
   border-bottom: 5px solid #545149;
 }
 .tweet-footer {
@@ -87,7 +88,7 @@ body {
 }
 
 .fa-heart:hover {
-  color: rgb(228, 193, 40);
+  color: red;
 }
 
 .main-footer {

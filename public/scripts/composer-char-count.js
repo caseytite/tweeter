@@ -3,7 +3,7 @@ $(() => {
   //tweet text element
   const $tweetText = $('#tweet-text');
 
-  $tweetText.on('input', function (element) {
+  $tweetText.on('input', function () {
     const numChars = $(this).val().length;
 
     $(this)
@@ -22,4 +22,16 @@ $(() => {
       $('.counter').css({ color: '#545149' });
     }
   });
+
+  const $heart = $('.fa-heart');
+  let clicks = 0;
+  $heart.on('click', function () {
+    clicks++;
+    if (clicks % 2 === 0) {
+      $heart.css({ color: 'blue', hover: true });
+    } else {
+      $heart.css({ color: 'red', hover: true });
+    }
+  });
 });
+// attributes.style.value

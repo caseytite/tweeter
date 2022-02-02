@@ -4,8 +4,8 @@
 
 nav {
   height: 120px;
-  /* background-color: #4056a1; */
-  background-image: url('../images/background.png');
+  background-color: #4056a1;
+  /* background-image: url('../images/background.png'); */
   viewport-fit: 100vw;
   color: #fff;
   display: flex;
@@ -39,10 +39,24 @@ nav span {
 .fa-angles-down {
   color: red;
   margin-bottom: 0.25em;
+  position: relative;
+  animation: arrows 0.425s linear 0.425s infinite alternate;
 }
 .new-tweet-arrows {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+@keyframes arrows {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 3px;
+  }
 }
