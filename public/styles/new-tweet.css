@@ -18,19 +18,24 @@
   color: #fff;
   border-radius: 5px;
 }
+
 .counter {
   margin-top: 0.5em;
   position: relative;
   /* padding-right: 10%; */
 }
+
 .dove {
   margin-top: 0.7em;
   color: #545149;
-  /* padding-right: 83%; */
-  /* padding-left: 0.2em; */
 }
+
 .dove a {
   color: #545149;
+}
+
+.dove a:hover {
+  color: #4056a1;
 }
 
 #tweet-text {
@@ -51,7 +56,4 @@
 
 #tweet-text:focus {
   outline: none;
-}
-.nerdy-birdy {
-  display: none;
 }
