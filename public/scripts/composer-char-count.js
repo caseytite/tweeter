@@ -28,13 +28,23 @@ $(() => {
   // Change heart color on clicks
 
   const $heart = $('.fa-heart');
-  let clicks = 0;
+  let heartClicks = 0;
   $heart.on('click', function () {
-    clicks++;
-    if (clicks % 2 === 0) {
-      $heart.addClass('clicked');
+    heartClicks++;
+    if (heartClicks % 2 === 0) {
+      $(this).addClass('clicked');
     } else {
-      $heart.removeClass('clicked');
+      $(this).removeClass('clicked');
+    }
+  });
+  const $flag = $('.fa-flag');
+  let flagClicks = 0;
+  $flag.on('click', function () {
+    flagClicks++;
+    if (flagClicks % 2 === 0) {
+      $(this).addClass('clicked');
+    } else {
+      $(this).removeClass('clicked');
     }
   });
 });

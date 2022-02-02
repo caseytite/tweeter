@@ -77,7 +77,7 @@ body {
   color: blue;
 }
 .fa-flag:hover {
-  color: rgb(228, 193, 40);
+  color: red;
 }
 
 .fa-retweet {
