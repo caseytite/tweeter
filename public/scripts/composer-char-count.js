@@ -28,9 +28,9 @@ $(() => {
   $heart.on('click', function () {
     clicks++;
     if (clicks % 2 === 0) {
-      $heart.css({ color: 'blue' });
+      $heart.addClass('clicked');
     } else {
-      $heart.css({ color: 'red' });
+      $heart.removeClass('clicked');
     }
   });
 });
