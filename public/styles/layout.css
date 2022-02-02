@@ -101,4 +101,14 @@ body {
 sup {
   font-family: sans-serif;
   top: -0.1em;
+  /* position: fixed; */
+  padding-right: 100px;
+}
+footer span a {
+  /* display: inline-block;
+  flex-direction: row; */
+  padding-left: 100px;
+  font-family: Bungee;
+  text-decoration: none;
+  color: #fff;
 }
