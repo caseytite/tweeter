@@ -9,7 +9,6 @@
   font-family: Bungee;
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
 }
 
@@ -29,6 +28,9 @@
   color: #545149;
   /* padding-right: 83%; */
   /* padding-left: 0.2em; */
+}
+.dove a {
+  color: #545149;
 }
 
 #tweet-text {
