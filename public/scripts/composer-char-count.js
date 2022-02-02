@@ -1,6 +1,8 @@
 $(() => {
   console.log('hello');
-  //tweet text element
+
+  // Keeping track of counter
+
   const $tweetText = $('#tweet-text');
 
   $tweetText.on('input', function () {
@@ -22,6 +24,8 @@ $(() => {
       $('.counter').css({ color: '#545149' });
     }
   });
+
+  // Change heart color on clicks
 
   const $heart = $('.fa-heart');
   let clicks = 0;

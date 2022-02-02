@@ -32,6 +32,8 @@ body {
   margin-left: 5%;
   margin-right: 5%;
 }
+/* Tweet container styles */
+
 .tweet {
   margin-top: 1.5em;
   border: 5px solid #545149;
@@ -65,7 +67,6 @@ body {
   margin-bottom: 1em;
   margin-left: 1.5em;
   margin-right: 1.5em;
-  /* border-top: 5px solid #545149; */
 }
 
 .at-user {
@@ -93,6 +94,8 @@ body {
 .clicked {
   color: red;
 }
+
+/* Main footer @ bottom of page */
 
 .main-footer {
   display: flex;
