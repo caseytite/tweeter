@@ -28,9 +28,9 @@ $(() => {
   $heart.on('click', function () {
     clicks++;
     if (clicks % 2 === 0) {
-      $heart.css({ color: 'blue', hover: true });
+      $heart.css({ color: 'blue' });
     } else {
-      $heart.css({ color: 'red', hover: true });
+      $heart.css({ color: 'red' });
     }
   });
 });
