@@ -85,7 +85,7 @@ body {
   margin-bottom: 0.25em;
 }
 .fa-retweet:hover {
-  color: rgb(228, 193, 40);
+  color: rgb(2, 90, 36);
 }
 
 .fa-heart:hover {
@@ -93,6 +93,9 @@ body {
 }
 .clicked {
   color: red;
+}
+.retweet {
+  color: rgb(2, 90, 36);
 }
 
 /* Main footer @ bottom of page */

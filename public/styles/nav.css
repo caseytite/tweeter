@@ -16,12 +16,13 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
-nav span {
+/* nav span {
   margin-left: 1.5em;
   margin-right: 1.5em;
   /* margin-bottom: 1em; */
-}
 
 .main-logo {
   font-family: Bungee;

@@ -23,28 +23,14 @@ $(() => {
       $('.counter').css({ color: '#545149' });
     }
   });
-
-  // Change heart color on clicks
-
-  const $heart = $('.fa-heart');
-  let heartClicks = 0;
-  // console.log(heartClicks);
-  $heart.on('click', function () {
-    heartClicks++;
-    if (heartClicks % 2 === 0) {
-      $(this).addClass('clicked');
-    } else {
-      $(this).removeClass('clicked');
-    }
-  });
-  const $flag = $('.fa-flag');
-  let flagClicks = 0;
-  $flag.on('click', function () {
-    flagClicks++;
-    if (flagClicks % 2 === 0) {
-      $(this).addClass('clicked');
-    } else {
-      $(this).removeClass('clicked');
+  let showTweetCount = 0;
+  $('.new-tweet-arrows').on('click', () => {
+    if (showTweetCount % 2 === 0) {
+      showTweetCount++;
+      $('.new-tweet').slideDown();
+    } else if (showTweetCount % 2 === 1) {
+      $('.new-tweet').slideUp();
+      showTweetCount++;
     }
   });
 });

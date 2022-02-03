@@ -2,6 +2,7 @@
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ *
  */
 
 $(() => {
@@ -16,11 +17,44 @@ $(() => {
     }
   };
 
+  // make flag/heart/retweet stay clicked
+  const clicker = function () {
+    const $heart = $('.fa-heart');
+    let heartClicks = 1;
+    $heart.on('click', function () {
+      heartClicks++;
+      if (heartClicks % 2 === 0) {
+        $(this).addClass('clicked');
+      } else {
+        $(this).removeClass('clicked');
+      }
+    });
+
+    const $flag = $('.fa-flag');
+    let flagClicks = 1;
+    $flag.on('click', function () {
+      flagClicks++;
+      if (flagClicks % 2 === 0) {
+        $(this).addClass('clicked');
+      } else {
+        $(this).removeClass('clicked');
+      }
+    });
+    const $reTweet = $('.fa-retweet');
+    let reClicks = 1;
+    $reTweet.on('click', function () {
+      reClicks++;
+      if (reClicks % 2 === 0) {
+        $(this).addClass('retweet');
+      } else {
+        $(this).removeClass('retweet');
+      }
+    });
+  };
+
   const $createTweetElement = function (tweetData) {
     const userInfo = tweetData.user;
     const time = timeago.format(tweetData.created_at);
-    const $heart = $('.fa-solid.fa-heart');
-    console.log($heart[0]);
 
     const escape = function (str) {
       let div = document.createElement('div');
@@ -98,6 +132,7 @@ $(() => {
       data: 'json',
       success: (tweets) => {
         $renderTweets(tweets);
+        clicker();
         console.log('success in load tweets');
       },
       error: (error) => {
