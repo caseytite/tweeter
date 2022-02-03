@@ -106,13 +106,16 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
-  background-color: #227ab1;
+  background-color: rgb(34, 122, 177);
   font-family: Bungee;
   color: #fff;
   text-align: center;
   margin-top: 1.5em;
   position: sticky;
   bottom: 0;
+}
+.main-footer span {
+  width: 20%;
 }
 
 sup {
@@ -121,8 +124,15 @@ sup {
 }
 footer span a {
   display: inline-flex;
+  align-self: center;
   font-family: Bungee;
   text-decoration: none;
   color: #fff;
   margin-right: 5px;
+  width: 20%;
+}
+.footer-link a {
+  display: inline;
+  flex-direction: row;
+  width: 20%;
 }

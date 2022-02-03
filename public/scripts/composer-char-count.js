@@ -2,7 +2,6 @@ $(() => {
   // Keeping track of counter
 
   const $tweetText = $('#tweet-text');
-  const $alert = $('.alert');
 
   $tweetText.on('input', function () {
     const numChars = $(this).val().length;
