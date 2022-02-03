@@ -19,17 +19,27 @@ $(() => {
   const $createTweetElement = function (tweetData) {
     const userInfo = tweetData.user;
     const time = timeago.format(tweetData.created_at);
+    const $heart = $('.fa-solid.fa-heart');
+    console.log($heart[0]);
+
+    const escape = function (str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
 
     const $newTweet = `
     <article class="tweet">
     <header class="tweet-header">
     <span class="user-avatar">
-    <img src="${userInfo.avatars}" class="tweet-user-avatar"></img> ${userInfo.name}
+    <img src="${userInfo.avatars}" class="tweet-user-avatar"></img> ${
+      userInfo.name
+    }
     </span>
     <span class="at-user"> ${userInfo.handle}</span>
     </header>
     
-    <p class="tweet-content">${tweetData.content.text}</p>
+    <p class="tweet-content">${escape(tweetData.content.text)}</p>
     
     <footer class="tweet-footer">
     <span>${time}</span>
@@ -48,15 +58,15 @@ $(() => {
 
   $('#submit-tweet').submit(function (event) {
     event.preventDefault();
-    // console.log($(this));
-    // console.log($(this).serialize());
 
     const data = $(this).serialize();
     const dataLength = data.slice(5).length;
-    console.log(data);
+
+    const $alert = $('.alert');
+    console.log('alert', $alert);
 
     if (dataLength > 140 || data === 'text=') {
-      alert('input empty or to long');
+      $('.alert').slideDown();
       event.preventDefault();
     } else {
       $.ajax({
@@ -65,6 +75,9 @@ $(() => {
         method: 'POST',
         success: (tweets) => {
           $loadTweets();
+          $('.counter').val('140');
+
+          $('.alert').slideUp();
           $tweetText.val('');
 
           console.log('successful post');
@@ -77,6 +90,8 @@ $(() => {
   });
 
   const $loadTweets = function () {
+    const $alert = $('.alert');
+    $alert.addClass('hidden');
     $.ajax({
       url: '/tweets',
       method: 'GET',
@@ -92,48 +107,3 @@ $(() => {
   };
   $loadTweets();
 });
-
-// //create tweet container article class-tweet
-// const $article = $('.tweet');
-
-// //group one
-
-// //create header class tweet-header
-// const $header = $('.tweet-header');
-// //create span class user-avatar
-// const $avatarSpan = $('.user-avatar');
-// //create span class at-user
-// const $userSpan = $('.at-user');
-// //create i tag
-// const $iAvatar = $('<i>');
-
-// //group two
-
-// //create p class tweet-content
-// const $para = $('<p>').text(tweetData.content.text);
-
-// //group three
-
-// // create footer class tweet-footer
-// const $footer = $('.tweet-footer');
-// //create span - for days ago
-// const $daysAgo = $('<span>');
-// //create div class tweet actions
-// const $actionsDiv = $('.tweet-actions');
-// // add three spans with icons
-// const $flag = $('<span>');
-// const $retweet = $('<span>');
-// const $heart = $('<span>');
-
-//tags
-
-// make element tags
-// const $articleTag = $('<article>').addClass('.tweet');
-// const $headerTag = $('<header>').addClass('.tweet-header');
-// const $spanTag = $('<span>');
-// const $iTag = $('<i>');
-// const $pTag = $('<article>').addClass('.tweet-content');
-// const $footerTag = $('footer>').addClass('.tweet-footer');
-// const $divTag = $('<div>').addClass('.tweet-actions');
-
-// const $insideHeader = $headerTag.append($spanTag);

@@ -1,9 +1,8 @@
 $(() => {
-  console.log('hello');
-
   // Keeping track of counter
 
   const $tweetText = $('#tweet-text');
+  const $alert = $('.alert');
 
   $tweetText.on('input', function () {
     const numChars = $(this).val().length;
@@ -29,6 +28,7 @@ $(() => {
 
   const $heart = $('.fa-heart');
   let heartClicks = 0;
+  // console.log(heartClicks);
   $heart.on('click', function () {
     heartClicks++;
     if (heartClicks % 2 === 0) {

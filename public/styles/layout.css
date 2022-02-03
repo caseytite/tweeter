@@ -102,11 +102,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-self: center;
-  background-color: #4056a1;
+  background-color: #227ab1;
   font-family: Bungee;
   color: #fff;
   text-align: center;
   margin-top: 1.5em;
+  position: sticky;
+  bottom: 0;
 }
 
 sup {
