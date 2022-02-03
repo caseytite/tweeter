@@ -5,50 +5,18 @@
  */
 
 $(() => {
-  const tweetData = {
-    user: {
-      name: 'Newton',
-      avatars: 'https://i.imgur.com/73hZDYK.png',
-      handle: '@SirIsaac',
-    },
-    content: {
-      text: 'If I have seen further it is by standing on the shoulders of giants',
-    },
-    created_at: 1461116232227,
-  };
-  const data = [
-    {
-      user: {
-        name: 'Newton',
-        avatars: 'https://i.imgur.com/73hZDYK.png',
-        handle: '@SirIsaac',
-      },
-      content: {
-        text: 'If I have seen further it is by standing on the shoulders of giants',
-      },
-      created_at: 1461116232227,
-    },
-    {
-      user: {
-        name: 'Descartes',
-        avatars: 'https://i.imgur.com/nlhLi3I.png',
-        handle: '@rd',
-      },
-      content: {
-        text: 'Je pense , donc je suis',
-      },
-      created_at: 1461113959088,
-    },
-  ];
+  const $tweetContainer = $('.main-tweet-container');
+  const $tweetText = $('#tweet-text');
 
-  const renderTweets = function (tweets) {
+  const $renderTweets = function (tweets) {
+    $tweetContainer.empty();
     for (const tweet of tweets) {
-      const userTweet = createTweetElement(tweet);
-      $('.main-tweet-container').append(userTweet);
+      const userTweet = $createTweetElement(tweet);
+      $('.main-tweet-container').prepend(userTweet);
     }
   };
 
-  const createTweetElement = function (tweetData) {
+  const $createTweetElement = function (tweetData) {
     const userInfo = tweetData.user;
     const time = timeago.format(tweetData.created_at);
 
@@ -76,8 +44,53 @@ $(() => {
     return $newTweet;
   };
 
-  renderTweets(data);
-  // console.log(createTweetElement(tweetData));
+  // $renderTweets(data);
+
+  $('#submit-tweet').submit(function (event) {
+    event.preventDefault();
+    // console.log($(this));
+    // console.log($(this).serialize());
+
+    const data = $(this).serialize();
+    const dataLength = data.slice(5).length;
+    console.log(data);
+
+    if (dataLength > 140 || data === 'text=') {
+      alert('input empty or to long');
+      event.preventDefault();
+    } else {
+      $.ajax({
+        url: '/tweets',
+        data: data,
+        method: 'POST',
+        success: (tweets) => {
+          $loadTweets();
+          $tweetText.val('');
+
+          console.log('successful post');
+        },
+        error: (error) => {
+          console.log('error on post');
+        },
+      });
+    }
+  });
+
+  const $loadTweets = function () {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      data: 'json',
+      success: (tweets) => {
+        $renderTweets(tweets);
+        console.log('success in load tweets');
+      },
+      error: (error) => {
+        console.log('did not work in load tweets', error);
+      },
+    });
+  };
+  $loadTweets();
 });
 
 // //create tweet container article class-tweet

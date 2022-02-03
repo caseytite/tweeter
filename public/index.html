@@ -78,7 +78,12 @@
     <main class="main-content">
       <section class="new-tweet">
         <h2>Get your tweet on!</h2>
-        <form method="POST" action="/tweets/" name="post-tweet">
+        <form
+          id="submit-tweet"
+          method="POST"
+          action="/tweets/"
+          name="post-tweet"
+        >
           <label for="tweet-text" class="tweet-text-label"
             ><b>What are you humming about?</b></label
           >
@@ -86,11 +91,17 @@
           <textarea
             name="text"
             id="tweet-text"
-            value=""
             placeholder="Whats tweet?"
           ></textarea>
           <div class="button-count">
-            <button type="submit" class="tweet-submit">Tweet</button>
+            <button
+              name="text"
+              type="submit"
+              for="post-tweet"
+              class="tweet-submit"
+            >
+              Tweet
+            </button>
             <span class="dove"
               ><a
                 href="https://images.unsplash.com/photo-1607063695801-7b75c014e25d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80"
@@ -103,7 +114,7 @@
 
       <!-- Tweet container -->
       <section class="main-tweet-container">
-        <article class="tweet">
+        <!-- <article class="tweet">
           <header class="tweet-header">
             <span class="user-avatar"
               ><i class="fa-solid fa-user-ninja"></i> Mr. Ninja</span
@@ -125,7 +136,7 @@
           </footer>
         </article>
         <!-- separate tweets -->
-        <article class="tweet">
+        <!-- <article class="tweet">
           <header class="tweet-header">
             <span class="user-avatar">
               <i class="fa-solid fa-user-astronaut"></i> Chris Hadfield
@@ -142,7 +153,7 @@
               <span><i class="fa-solid fa-heart"></i></span>
             </div>
           </footer>
-        </article>
+        </article> -->
       </section>
     </main>
 

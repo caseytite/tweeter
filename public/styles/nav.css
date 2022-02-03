@@ -4,8 +4,8 @@
 
 nav {
   height: 120px;
-  background-color: #4056a1;
-  /* background-image: url('../images/background.png'); */
+  /* background-color: #4056a1; */
+  background-image: url('../images/background.png');
   viewport-fit: 100vw;
   color: #fff;
   display: flex;
