@@ -9,6 +9,8 @@ $(() => {
   const $tweetContainer = $('.main-tweet-container');
   const $tweetText = $('#tweet-text');
 
+  //render new tweets to page------------------------------------------
+
   const $renderTweets = function (tweets) {
     $tweetContainer.empty();
     for (const tweet of tweets) {
@@ -17,7 +19,8 @@ $(() => {
     }
   };
 
-  // make flag/heart/retweet stay clicked
+  // make flag/heart/retweet stay clicked-------------until page reload anyways
+
   const clicker = function () {
     const $heart = $('.fa-heart');
     let heartClicks = 1;
@@ -44,6 +47,7 @@ $(() => {
     let reClicks = 1;
     $reTweet.on('click', function () {
       reClicks++;
+
       if (reClicks % 2 === 0) {
         $(this).addClass('retweet');
       } else {
@@ -51,6 +55,8 @@ $(() => {
       }
     });
   };
+
+  //creates new tweet----------------------------------------------------
 
   const $createTweetElement = function (tweetData) {
     const userInfo = tweetData.user;
@@ -88,16 +94,13 @@ $(() => {
     return $newTweet;
   };
 
-  // $renderTweets(data);
+  //------- post new tweets---------------------------------------------
 
   $('#submit-tweet').submit(function (event) {
     event.preventDefault();
 
     const data = $(this).serialize();
     const dataLength = data.slice(5).length;
-
-    const $alert = $('.alert');
-    console.log('alert', $alert);
 
     if (dataLength > 140 || data === 'text=') {
       $('.alert').slideDown();
@@ -107,7 +110,7 @@ $(() => {
         url: '/tweets',
         data: data,
         method: 'POST',
-        success: (tweets) => {
+        success: () => {
           $loadTweets();
           $('.counter').val('140');
 
@@ -117,11 +120,13 @@ $(() => {
           console.log('successful post');
         },
         error: (error) => {
-          console.log('error on post');
+          console.log('Post tweets failed with', error.status);
         },
       });
     }
   });
+
+  //load tweets to page-----------------------------------------------
 
   const $loadTweets = function () {
     const $alert = $('.alert');
@@ -136,7 +141,7 @@ $(() => {
         console.log('success in load tweets');
       },
       error: (error) => {
-        console.log('did not work in load tweets', error);
+        console.log('Load tweets failed with', error.status);
       },
     });
   };

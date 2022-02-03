@@ -76,19 +76,20 @@ body {
 .tweet-actions {
   color: blue;
 }
-.fa-flag:hover {
+/* .fa-flag:hover {
   color: red;
-}
+} */
 
 .fa-retweet {
   margin-left: 0.25em;
-  margin-bottom: 0.25em;
+  margin-right: 0.25em;
 }
 .fa-retweet:hover {
   color: rgb(2, 90, 36);
 }
 
-.fa-heart:hover {
+.fa-heart:hover,
+.fa-flag:hover {
   color: red;
 }
 .clicked {
