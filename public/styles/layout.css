@@ -70,11 +70,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   font-size: medium;
-
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin: 0.5em 1.5em 1em 1.5em;
 }
 .tweet-user-avatar {
   padding-right: 0.5em;
