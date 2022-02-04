@@ -35,9 +35,13 @@ body {
   margin-right: 5%;
 }
 /* Tweet container styles */
+.main-tweet-container {
+  padding-top: 1em;
+}
 
 .tweet {
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border: 5px solid #545149;
   border-radius: 3px;
   width: 100%;
@@ -120,11 +124,12 @@ body {
   font-family: Bungee;
   color: #fff;
 
-  margin-top: 1.5em;
+  /* margin-top: 5em; */
   position: fixed;
   bottom: 0;
   white-space: nowrap;
 
+  /* padding-top: 2em; */
   padding-right: 1em;
   padding-left: 1em;
   width: 100%;
