@@ -25,6 +25,7 @@ Tablets are commonly between 768px to 1024px. */
     margin-top: 2.5em;
     margin-left: 2.5em;
     width: 40%;
+    border-radius: 5%;
   }
   .main-tweet-container {
     width: 100%;
