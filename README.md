@@ -33,6 +33,7 @@ This repository is the starter code for the project: Students will fork and clon
 !["Shows page shrunken down"](https://github.com/caseytite/tweeter/blob/master/docs/Smaller-screen-page.png?raw=true)
 
 - A completley collapsed view of the page, and a tweet.
+
   !["Shows page shrunken down even further"](https://github.com/caseytite/tweeter/blob/master/docs/Collapsed-to-of-page.png?raw=true)
 
 - These are both buttons to open the tweet entry.
