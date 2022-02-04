@@ -124,12 +124,10 @@ body {
   font-family: Bungee;
   color: #fff;
 
-  /* margin-top: 5em; */
   position: fixed;
   bottom: 0;
   white-space: nowrap;
 
-  /* padding-top: 2em; */
   padding-right: 1em;
   padding-left: 1em;
   width: 100%;
