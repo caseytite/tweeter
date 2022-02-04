@@ -6,7 +6,6 @@
   height: 400px;
   width: 100%;
   background-image: url('../images/background.png');
-  /* z-index: 0; */
 }
 
 .avatar-name {

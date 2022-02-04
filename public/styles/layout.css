@@ -21,6 +21,8 @@ body {
   background-color: #f4f1ec;
   font-family: Source Sans Pro, sans-serif;
   font-size: 24px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /*
@@ -38,6 +40,7 @@ body {
   margin-top: 1.5em;
   border: 5px solid #545149;
   border-radius: 3px;
+  width: 100%;
 }
 .tweet:hover {
   box-shadow: 10px 5px 5px rgb(145, 136, 136);
@@ -56,6 +59,7 @@ body {
   padding-bottom: 1em;
   padding-left: 0.5em;
   border-bottom: 5px solid #545149;
+  word-wrap: break-word;
 }
 .tweet-footer {
   display: flex;
@@ -76,9 +80,6 @@ body {
 .tweet-actions {
   color: blue;
 }
-/* .fa-flag:hover {
-  color: red;
-} */
 
 .fa-retweet {
   margin-left: 0.25em;
@@ -109,13 +110,12 @@ body {
   background-color: rgb(34, 122, 177);
   font-family: Bungee;
   color: #fff;
-  text-align: center;
   margin-top: 1.5em;
   position: sticky;
   bottom: 0;
-}
-.main-footer span {
-  width: 20%;
+  white-space: nowrap;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 sup {
@@ -128,11 +128,8 @@ footer span a {
   font-family: Bungee;
   text-decoration: none;
   color: #fff;
-  margin-right: 5px;
-  width: 20%;
 }
 .footer-link a {
   display: inline;
   flex-direction: row;
-  width: 20%;
 }

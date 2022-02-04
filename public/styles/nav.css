@@ -6,12 +6,11 @@ nav {
   height: 120px;
   /* background-color: #4056a1; */
   background-image: url('../images/background.png');
-  viewport-fit: 100vw;
+  viewport-fit: 100%;
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* align-items: flex-end; */
   justify-content: space-between;
   position: sticky;
   top: 0;
@@ -19,10 +18,6 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
-/* nav span {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  /* margin-bottom: 1em; */
 
 .main-logo {
   font-family: Bungee;

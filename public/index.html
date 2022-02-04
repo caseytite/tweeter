@@ -3,7 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -31,6 +34,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -62,68 +66,70 @@
 
       <div class="new-tweet-arrows">
         <span class="write-new-tweet"><b>Write</b> a new tweet</span>
-        <a href="#newtweet"><i class="fa-solid fa-angles-down"></i></a>
+        <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="header">
-      <div class="avatar">
-        <img src="/images/profile-hex.png" alt="user avatar" />
-      </div>
-      <div>
-        <a name="newtweet"></a>
-        <h2 class="avatar-name"><b>Dirt</b> Reynolds</h2>
-      </div>
-    </header>
+    <div class="change">
+      <header class="header">
+        <div class="avatar">
+          <img src="/images/profile-hex.png" alt="user avatar" />
+        </div>
+        <div>
+          <h2 class="avatar-name"><b>Dirt</b> Reynolds</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="main-content">
-      <section class="new-tweet">
-        <h2>Get your tweet on!</h2>
-        <form
-          id="submit-tweet"
-          method="POST"
-          action="/tweets/"
-          name="post-tweet"
-        >
-          <label for="tweet-text" class="tweet-text-label"
-            ><b>What are you humming about?</b></label
+      <!-- Page-specific (main) content here -->
+      <main class="main-content">
+        <section class="new-tweet">
+          <h2>Get your tweet on!</h2>
+          <form
+            id="submit-tweet"
+            method="POST"
+            action="/tweets/"
+            name="post-tweet"
           >
-
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="Whats tweet?"
-          ></textarea>
-          <div class="button-count">
-            <button
-              name="text"
-              type="submit"
-              for="post-tweet"
-              class="tweet-submit"
+            <label for="tweet-text" class="tweet-text-label"
+              ><b>What are you humming about?</b></label
             >
-              Tweet
-            </button>
-            <span class="dove"
-              ><a
-                href="https://images.unsplash.com/photo-1607063695801-7b75c014e25d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80"
-                ><i class="fa-solid fa-dove"></i></a
-            ></span>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <span class="alert"
-          ><i class="fa-solid fa-circle-radiation"></i
-          ><b> Invalid tweet</b></span
-        >
-      </section>
 
-      <!-- Tweet container -->
-      <section class="main-tweet-container"></section>
-    </main>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="Whats tweet?"
+            ></textarea>
+            <div class="button-count">
+              <button
+                name="text"
+                type="submit"
+                for="post-tweet"
+                class="tweet-submit"
+              >
+                Tweet
+              </button>
+              <span class="dove"
+                ><a
+                  href="https://images.unsplash.com/photo-1607063695801-7b75c014e25d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80"
+                  ><i class="fa-solid fa-dove"></i></a
+              ></span>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+          <span class="alert"
+            ><i class="fa-solid fa-circle-radiation"></i
+            ><b> Invalid tweet</b></span
+          >
+        </section>
 
+        <!-- Tweet container -->
+        <section class="main-tweet-container"></section>
+      </main>
+    </div>
     <!-- Bottom footer -->
     <footer class="main-footer">
-      <span></span>
+      <!-- <span></span> -->
       <span> Tweet Tweet <sup>©</sup></span>
       <span class="footer-link"><a href="#top">Back to top</a></span>
     </footer>

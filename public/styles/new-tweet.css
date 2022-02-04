@@ -24,7 +24,6 @@
 .counter {
   margin-top: 0.5em;
   position: relative;
-  /* padding-right: 10%; */
 }
 
 .dove {
@@ -62,7 +61,6 @@
 
 .alert {
   color: red;
-  /* padding-top: 1em; */
 
   display: none;
 }

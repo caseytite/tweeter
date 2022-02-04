@@ -1,0 +1,81 @@
+@media (min-width: 1024px) {
+  nav {
+    background-color: #4056a1;
+    background-image: none;
+  }
+  .change {
+    display: flex;
+  }
+
+  .avatar {
+    z-index: 0;
+    position: relative;
+    margin-top: 1.8em;
+  }
+
+  .header {
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+  }
+  .main-tweet-container {
+    width: 100%;
+  }
+
+  .main-content {
+    margin-top: 1em;
+    width: 50%;
+  }
+  .tweet-content {
+    word-wrap: break-word;
+    width: 90%;
+  }
+  article .tweet {
+    width: 100%;
+  }
+  .main-footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    background-image: url('../images/background.png');
+  }
+  .main-footer {
+    word-wrap: normal;
+  }
+  .avatar {
+    z-index: 0;
+    position: relative;
+  }
+
+  .main-footer .footer-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .new-tweet-arrows {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .main-footer span {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .fa-earlybirds {
+    display: none;
+  }
+
+  .main-footer .footer-link {
+    display: inline-block;
+    justify-self: center;
+    margin-right: 5em;
+  }
+}

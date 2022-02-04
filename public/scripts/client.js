@@ -100,11 +100,14 @@ $(() => {
     event.preventDefault();
 
     const data = $(this).serialize();
-    const dataLength = data.slice(5).length;
+    // const dataLength = data.slice(5).length;
+    const contentLength = $('#tweet-text').val().length;
+    console.log('content', contentLength);
 
-    if (dataLength > 140 || data === 'text=') {
+    if (contentLength > 140 || data === 'text=') {
       $('.alert').slideDown();
-      event.preventDefault();
+
+      // event.preventDefault();
     } else {
       $.ajax({
         url: '/tweets',
