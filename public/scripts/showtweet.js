@@ -15,4 +15,13 @@ $(() => {
     $('.new-tweet').slideDown();
     showTweetCount = 1;
   });
+
+  //atuo opens the tweet window if the page get too small
+  const $window = $(window).width();
+  const closeTweet = function (window) {
+    if ($window < 500) {
+      $('.new-tweet').slideDown();
+    }
+  };
+  closeTweet($window);
 });

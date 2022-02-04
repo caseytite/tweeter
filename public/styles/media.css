@@ -73,6 +73,9 @@ Tablets are commonly between 768px to 1024px. */
   .new-tweet-arrows {
     display: none;
   }
+  .new-tweet {
+    display: block;
+  }
 }
 @media (max-width: 415px) {
   .main-footer span {
