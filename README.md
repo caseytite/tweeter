@@ -21,12 +21,12 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Top of the page, Displaying some interesting tweets and a user.
 
-!["Top of page with closed tweet box"](https://github.com/caseytite/tweeter/blob/master/docs/Closed-tweet-box.png?raw=true)
+!["Top of page with closed tweet box"](https://github.com/caseytite/tweeter/blob/master/docs/Closed-tweet-entry.png?raw=true)
 
 - An invalid tweet message is displayed when to long of a tweet is attempted.
 - Also showing the Re-tweet and Heart buttons clicked.
 
-!["Showing tweet entry box and an invalid tweet"](https://github.com/caseytite/tweeter/blob/master/docs/Invalid-entry.png?raw=true)
+!["Showing tweet entry box and an invalid tweet"](https://github.com/caseytite/tweeter/blob/master/docs/Invalid-tweet.png?raw=true)
 
 - A shrunken down image of the page and its changed Nav/Header.
 
