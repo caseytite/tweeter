@@ -1,3 +1,7 @@
+/* 
+A typical breakpoint to consider for desktop is 1024px and above.
+Tablets are commonly between 768px to 1024px. */
+
 @media (min-width: 1024px) {
   nav {
     background-color: #4056a1;
@@ -16,6 +20,7 @@
   .header {
     margin-top: 2.5em;
     margin-left: 2.5em;
+    width: 30%;
   }
   .main-tweet-container {
     width: 100%;
@@ -67,12 +72,6 @@
   .main-footer span {
     display: none;
   }
-}
-@media (max-width: 375px) {
-  .fa-earlybirds {
-    display: none;
-  }
-
   .main-footer .footer-link {
     display: inline-block;
     justify-self: center;
