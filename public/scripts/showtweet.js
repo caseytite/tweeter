@@ -17,11 +17,14 @@ $(() => {
   });
 
   //atuo opens the tweet window if the page get too small
-  const $window = $(window).width();
-  const closeTweet = function (window) {
-    if ($window < 500) {
+
+  $(window).on('resize', () => {
+    if ($(window).width() < 500) {
       $('.new-tweet').slideDown();
+      showTweetCount = 1;
+    } else {
+      $('.new-tweet').slideUp();
+      showTweetCount = 0;
     }
-  };
-  closeTweet($window);
+  });
 });
