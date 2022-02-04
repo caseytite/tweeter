@@ -4,7 +4,7 @@ Tablets are commonly between 768px to 1024px. */
 
 @media (min-width: 1024px) {
   nav {
-    background-color: #4056a1;
+    background-color: rgb(34, 122, 177);
     background-image: none;
   }
   .change {
@@ -20,7 +20,7 @@ Tablets are commonly between 768px to 1024px. */
   .header {
     margin-top: 2.5em;
     margin-left: 2.5em;
-    width: 30%;
+    width: 40%;
   }
   .main-tweet-container {
     width: 100%;
@@ -28,7 +28,7 @@ Tablets are commonly between 768px to 1024px. */
 
   .main-content {
     margin-top: 1em;
-    width: 65%;
+    width: 60%;
   }
   .tweet-content {
     word-wrap: break-word;
