@@ -72,9 +72,18 @@ body {
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
+.tweet-user-avatar {
+  padding-right: 0.5em;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+}
 
 .at-user {
   color: #a7a5a1;
+  padding-right: 0.5em;
 }
 
 .tweet-actions {

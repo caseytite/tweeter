@@ -11,6 +11,8 @@
 .avatar-name {
   color: #fff;
   font-weight: normal;
+  z-index: 10;
+  position: relative;
 }
 .avatar {
   z-index: 10;

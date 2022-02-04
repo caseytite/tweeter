@@ -16,6 +16,10 @@ Tablets are commonly between 768px to 1024px. */
     position: relative;
     margin-top: 1.8em;
   }
+  .avatar-name {
+    z-index: 0;
+    position: relative;
+  }
 
   .header {
     margin-top: 2.5em;
@@ -30,10 +34,7 @@ Tablets are commonly between 768px to 1024px. */
     margin-top: 1em;
     width: 60%;
   }
-  .tweet-content {
-    word-wrap: break-word;
-    width: 95%;
-  }
+
   article .tweet {
     width: 100%;
   }
@@ -54,6 +55,10 @@ Tablets are commonly between 768px to 1024px. */
     z-index: 0;
     position: relative;
   }
+  .avatar-name {
+    z-index: 0;
+    position: relative;
+  }
 
   .main-footer .footer-link {
     display: flex;
@@ -68,7 +73,7 @@ Tablets are commonly between 768px to 1024px. */
     display: none;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .main-footer span {
     display: none;
   }
