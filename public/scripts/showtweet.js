@@ -21,8 +21,7 @@ $(() => {
   });
 
   //auto opens the tweet window if the page gets too small
-  // note the focus in here appears not to work when the screen slides, but i think its because when the screen is getting dragged the focus isnt on the window and when you click back into the window you can see the caret flash in the input area and then go away because we click on another part of the screen, so I think it does actually work. Ive messed around with this one for the better part of an hour so I would love your feedback on it if you have any suggestions!
-
+ 
   $(window).on('resize', () => {
     if ($(window).width() < 500) {
       $('.new-tweet').slideDown();
